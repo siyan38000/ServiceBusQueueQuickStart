@@ -12,7 +12,7 @@ namespace QueueSender.Models
 
         public string Name { get; set; }
 
-        public Boolean IsInStock { get; set; }
+        public int Quantity { get; set; }
 
     }
 }
