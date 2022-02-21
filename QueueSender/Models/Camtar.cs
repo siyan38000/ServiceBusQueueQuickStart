@@ -15,5 +15,7 @@ namespace QueueSender.Models
         public Boolean IsArrived { get; set; }  
 
         public Boolean  IsLeft { get; set; }
+
+        public DateTime date { get; set; }
     }
 }
