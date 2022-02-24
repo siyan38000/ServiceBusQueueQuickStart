@@ -1,0 +1,17 @@
+<div class="card text-center my-5 mx-auto" style="width: 80%; max-width: 80rem;">
+  <div class="card-body">
+    <h5 class="card-title">STOCKAGE</h5>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+      <th *ngFor=" let header of headers">{{header}}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks">
+        <td>{{stock.nomProduit}}</td>
+        <td>{{stock.quantite}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
