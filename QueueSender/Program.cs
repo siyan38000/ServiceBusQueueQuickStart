@@ -63,6 +63,8 @@ public class Program
         {
             string messageToSend = GenerateRandomMessage();
             SendMessages(messageToSend);
+            messageToSend = GenerateStock();
+            SendMessages(messageToSend);
         }, null, startTimeSpan, periodTimeSpan);
         Console.ReadKey();
     }
@@ -106,6 +108,36 @@ public class Program
 
         int rndCamtar = random.Next(camions.Length);
         string message = JsonSerializer.Serialize(camions[rndCamtar]);
+        return message;
+    }
+    public static string GenerateStock()
+    {
+        References ref1 = new References();
+        ref1.Id = 1;
+        ref1.Name = "Lit";
+        ref1.Quantity = 4;
+
+        References ref2 = new References();
+        ref2.Id = 2;
+        ref2.Name = "Matelas";
+        ref2.Quantity = 2;
+
+        References ref3 = new References();
+        ref3.Id = 3;
+        ref3.Name = "Table";
+        ref3.Quantity = 4;
+
+        References ref4 = new References();
+        ref4.Id = 4;
+        ref4.Name = "Chaufage";
+        ref4.Quantity = 8;
+
+        References[] refs = new References[4];
+        refs[0] = ref1;
+        refs[1] = ref2;
+        refs[2] = ref3;
+        refs[3] = ref4;
+        string message = JsonSerializer.Serialize(refs);
         return message;
     }
 }
